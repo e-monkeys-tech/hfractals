@@ -1,0 +1,31 @@
+cabal-version:      2.4
+name:               hfractals
+version:            0.1.0.0
+
+synopsis:	       Haskell package to generate fractals (TODO: rewrite using gloss lib)
+
+description:       Haskell package to generate fractals (inspired by http://learn.hfm.io/fractals.html)
+
+-- bug-reports:
+license:            MIT
+author:             Pierre Baconnier
+maintainer:         pierre.baconnier@health-data-hub.fr
+
+-- A copyright notice.
+-- copyright:
+-- category:
+extra-source-files: CHANGELOG.md
+-- apt-get install libgnutls* libsqlite3-dev libxss-dev
+executable hfractals
+    main-is: Main.hs
+    other-modules:
+        LineGraphics
+        Fractals
+    build-depends:
+        base               >=4.11
+       , haskell-say       ^>=1.0.0.0
+       , JuicyPixels       ^>=3.3.5
+       , Rasterific        ^>=0.7.5.4
+       , HGL               ^>=3.2
+    hs-source-dirs:   app
+    default-language: Haskell2010
